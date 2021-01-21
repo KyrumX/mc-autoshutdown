@@ -1,7 +1,8 @@
 package aaron.mcautoshutdown;
 
-import aaron.mcautoshutdown.listener.JoinListener;
+import aaron.mcautoshutdown.listener.EmptyServerListener;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitScheduler;
 
 public class McAutoshutdown extends JavaPlugin {
     @Override
@@ -9,7 +10,7 @@ public class McAutoshutdown extends JavaPlugin {
         super.onEnable();
 
         // Register events
-        getServer().getPluginManager().registerEvents(new JoinListener(), this);
+        getServer().getPluginManager().registerEvents(new EmptyServerListener(this), this);
     }
 
     @Override
