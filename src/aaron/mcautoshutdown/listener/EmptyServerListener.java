@@ -18,7 +18,7 @@ public class EmptyServerListener implements Listener {
     @EventHandler
     public void onPlayerQuit(PlayerQuitEvent event) {
         if(plugin.getServer().getOnlinePlayers().size() <= 0) {
-            schedulerId = plugin.getServer().getScheduler().scheduleSyncDelayedTask(this.plugin, new Runnable() {
+            this.schedulerId = plugin.getServer().getScheduler().scheduleSyncDelayedTask(this.plugin, new Runnable() {
                 @Override
                 public void run() {
                     plugin.getServer().shutdown();
