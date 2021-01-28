@@ -1,5 +1,5 @@
 name: McAutotshutdown
-version: 0.1
+version: 1.0.0
 author: Aaron
 main: aaron.mcautoshutdown.McAutoshutdown
 api-version: 1.16
